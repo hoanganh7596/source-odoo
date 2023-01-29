@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="courses_menu_root"
+        name="Courses"
+        sequence="30">
+
+        <menuitem id="course_menu"
+            name="Courses"
+            sequence="10"
+            action="action_course_model"/>
+        <menuitem id="room_menu"
+            name="Rooms"
+            action="action_room_model"/>
+
+    </menuitem>
+    <template id="new_web_page" name="Your page name">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <!-- Your content here -->
+            </div>
+        </t>
+    </template>
+</odoo>

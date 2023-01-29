@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="room_model_tree_view" model="ir.ui.view">
+        <field name="name">room.tree</field>
+        <field name="model">course.room</field>
+        <field name="arch" type="xml">
+            <tree string="room">
+                <field name="name" optional="show"/>
+                <field name="capacity" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="room_model_form_view" model="ir.ui.view">
+        <field name="name">room.form</field>
+        <field name="model">course.room</field>
+        <field name="arch" type="xml">
+            <form string="room">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="capacity"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_room_model" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="res_model">course.room</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
