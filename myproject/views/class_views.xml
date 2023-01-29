@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="class_model_tree_view" model="ir.ui.view">
+        <field name="name">class.tree</field>
+        <field name="model">project.class</field>
+        <field name="arch" type="xml">
+            <tree string="Classes">
+                <field name="name" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="class_model_form_view" model="ir.ui.view">
+        <field name="name">class.form</field>
+        <field name="model">project.class</field>
+        <field name="arch" type="xml">
+            <form string="Class">
+                <header>
+                    <button name="%(myproject.action_report_class)d" string="Print" type="action"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <field name="student_ids">
+                        <tree string="Students">
+                            <field name="name"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_class_model" model="ir.actions.act_window">
+        <field name="name">classes</field>
+        <field name="res_model">project.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

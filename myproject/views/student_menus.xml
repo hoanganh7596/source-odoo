@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="my_project_menu_root"
+        name="My Project"
+        sequence="30">
+
+        <menuitem id="student_menu"
+            name="Student"
+            sequence="10"
+            action="action_student_model"/>
+        <menuitem id="class_menu"
+            name="Classes"
+            action="action_class_model"/>
+
+    </menuitem>
+
+</odoo>
